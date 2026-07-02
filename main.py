@@ -1,5 +1,6 @@
 from art import art
 from morse import MorseCode
+from sound import transmit
 
 print(art)
 
@@ -16,6 +17,10 @@ while True:
         try:
             code = morse_code.encode(text)
             print("Your Morse Code is: {}".format(code), end='\n')
+            sound = input("Do you want to hear your code sound? y:yes, n:no : ").lower()
+            if sound == "y":
+                transmit(code=code)
+
         except KeyError:
             print(text)
             print("Your text must only contains alphabets and digit numbers.")
