@@ -8,29 +8,29 @@ there is an option to listen to ***Audio* of Morse code**
 
 ## 1. Project Setup
 
-Clone this repository using git:
++ Clone this repository using git:
    
 ```bash
     git clone https://github.com/ASoukhteh/Morse-Code.git
 ```
 ## 2. Setup the environment
-Setup the build environment for your target operating system:
++ Setup the build environment for your target operating system:
 
 ### Mac
 
-Install the xcode command line tools if you don't already have them installed:
++ Install the xcode command line tools if you don't already have them installed:
 ```bash
     xcode-select --install
 ```
 ### Ubuntu
 
-Install the following developer libraries using apt-get:
++ Install the following developer libraries using apt-get:
 ```bash
     sudo apt-get install -y python3-dev libasound2-dev
 ```
 ### CentOS
-
-Install the following developer libraries using yum:
+ 
++ Install the following developer libraries using yum:
 ```bash
     sudo yum install alsa-lib-devel
 ```
@@ -78,19 +78,24 @@ Install the following developer libraries using yum:
 </tbody>
 </table></div>
 
-Install the following python modules into your virtual environment using PIP:
++ Install the following python modules into your virtual environment using PIP:
 
 ```bash
-pip install numpy simpleaudio
+pip install -r requirements.txt
 ```
 
-Test that the install of simpleaudio was successful, open a python intrepreter by typing `python` in your virtual environment console. In the python intrepreter, type the following commands:
++ Test that the install of **simpleaudio** was successful, open a python intrepreter by typing `python` in your virtual environment console. In the python intrepreter, type the following commands:
 
-```bash
+```python
 import simpleaudio.functionchecks as fc
 fc.LeftRightCheck.run()
 ```
 
+```text
 You should here a piano note from each of your computer speakers.
+```
 
-https://github.com/jbourquin/morse-code
+----
+
+I inspired by and use this [repo](https://github.com/jbourquin/morse-code) to add audio to my codes.
+
